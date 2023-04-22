@@ -19,7 +19,7 @@ const refs = {
 };
 
 refs.gallery.insertAdjacentHTML("beforeend", onGallery(galleryItems));
-refs.gallery.addEventListener("click", onModalGalerry);
+refs.gallery.addEventListener("click", () => {});
 
 let curentModal = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
@@ -37,9 +37,4 @@ function onGallery(el) {
     </li>`;
     })
     .join("");
-}
-
-function onModalGalerry(e) {
-  e.preventDefault();
-  curentModal;
 }
